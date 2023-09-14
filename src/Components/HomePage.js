@@ -22,7 +22,7 @@ const HomePage = () => {
         <div className='movie-list'>
             <div className='movie-list-heading'>
                 <h2>Featured Movie</h2>
-                <a href='/'>See more > </a>
+                <a href='/'>See more </a>
             </div>
                 {loading && <h2>Loading...</h2>}
                 <h2>{error}</h2>
