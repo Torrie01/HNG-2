@@ -26,7 +26,7 @@ const HomePage = () => {
             </div>
                 {loading && <h2>Loading...</h2>}
                 <h2>{error}</h2>
-            <div className='moviesGrid-content'>
+            <div className='moviesGrid-contents'>
 
                 <MoviesCard movieLists={movieLists} isClicked={isClicked} handleClick={handleClick}/>
             </div>
