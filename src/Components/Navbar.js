@@ -11,7 +11,7 @@ const Navbar = () => {
             <a href='http://localost:3000'>MovieBox</a>
         </div>
         <div className='middle-nav'>
-            <input type='text'className='search-input' placeholder='What do you want to watch?'/>
+            <input type='text'className='search-bar' placeholder='What do you want to watch?'/>
             <img src={search} alt=''/>
         </div>
         <div className='right-nav'>

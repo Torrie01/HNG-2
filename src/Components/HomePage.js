@@ -3,32 +3,32 @@ import Navbar from './Navbar'
 import Footer from './Footer';
 import fetchData from './fetchData';
 import { useState } from 'react';
-import MovieCard from './MovieCard';
+import MoviesCard from './MoviesCard'
 
 
 
 const HomePage = () => {    
-    const {data:movieLists, error, loading} = fetchData('https://api.themoviedb.org/3/discover/movie?api_key=f795ec3c5ed2510991e6639ae7e2fc8a')
+    const {data:movieLists, error, loading} = fetchData('https://api.themoviedb.org/3/discover/movie?api_key=850136383d9112b1fa4ef05d1d27c587')
     const [isClicked, setIsClicked] = useState(false);
     const handleClick = () => {
         setIsClicked(!isClicked);
     }
   return (
-    <div className='container'>
+    <div className='content'>
         <div className='hero-section'>
             <Navbar />
             <Hero />
         </div>
         <div className='movie-list'>
-            <div className='movie-list-heading'>
+            <div className='movies-grid'>
                 <h2>Featured Movie</h2>
                 <a href='/'>See more </a>
             </div>
                 {loading && <h2>Loading...</h2>}
                 <h2>{error}</h2>
-            <div className='movieList-containers'>
+            <div className='moviesGrid-content'>
 
-                <MovieCard movieLists={movieLists} isClicked={isClicked} handleClick={handleClick}/>
+                <MoviesCard movieLists={movieLists} isClicked={isClicked} handleClick={handleClick}/>
             </div>
         </div>
         <Footer />
